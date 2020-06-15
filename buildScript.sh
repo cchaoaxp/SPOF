@@ -1,7 +1,5 @@
 #!/bin/bash
 
-ls -la
-
 echo "Executing $0"
 echo "hostname is $HOSTNAME"
 
@@ -18,19 +16,13 @@ if [[ ! -d "$BUILD_DIR" ]]; then
    mkdir -m775 $BUILD_DIR
 fi
 
-ls
-
 cd $BUILD_DIR
-echo "pwd to QtBuild ?"
-pwd
-
-echo "ls SPOF items:"
-
-ls $PROJECT_DIR
 
 $QMAKE $PROJECT_DIR
 make
-ls
+
+echo "do we have a makefile ?"
+ls -la
 
 echo "Ending Executing $0"
 
