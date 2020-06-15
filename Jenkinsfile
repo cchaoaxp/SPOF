@@ -18,5 +18,11 @@ pipeline {
       }
     }
 
+    stage('Qt-Build') {
+      steps {
+        sh './buildScript.sh'
+      }
+    }
+
   }
 }
