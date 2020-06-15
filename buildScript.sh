@@ -17,7 +17,7 @@ if [[ ! -d "$BUILD_DIR" ]]; then
 fi
 
 cd $BUILD_DIR
-chmod -m775 -R ../
+chmod 775 -R ../
 
 $QMAKE $PROJECT_DIR
 make
