@@ -11,7 +11,7 @@ pipeline {
 
         stage('dev') {
           steps {
-            git(url: 'https://github.com/cchaoaxp/SPOF.git', branch: 'dev')
+            git 'https://github.com/cchaoaxp/SPOF.git'
           }
         }
 
