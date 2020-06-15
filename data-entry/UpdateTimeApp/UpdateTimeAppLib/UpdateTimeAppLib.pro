@@ -33,10 +33,10 @@ unix {
 }
 !isEmpty(target.path): INSTALLS += target
 
-win32: LIBS += -L$$PWD/../../../build-DE-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib/ -lPanelsLib
+win32: LIBS += -L$$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib/ -lPanelsLib
 
-INCLUDEPATH += $$PWD/../../../build-DE-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib
-DEPENDPATH += $$PWD/../../../build-DE-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib
+INCLUDEPATH += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib
+DEPENDPATH += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib
 
-win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../../build-DE-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib/PanelsLib.lib
-else:win32-g++: PRE_TARGETDEPS += $$PWD/../../../build-DE-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib/libPanelsLib.a
+win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib/PanelsLib.lib
+else:win32-g++: PRE_TARGETDEPS += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib/libPanelsLib.a
