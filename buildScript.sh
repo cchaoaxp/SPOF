@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ls
+ls -la
+
 echo "Executing $0"
 echo "hostname is $HOSTNAME"
 
@@ -28,7 +29,6 @@ echo "ls SPOF items:"
 ls $PROJECT_DIR
 
 $QMAKE $PROJECT_DIR
-cd ..
 make
 ls
 
