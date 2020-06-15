@@ -17,6 +17,7 @@ if [[ ! -d "$BUILD_DIR" ]]; then
 fi
 
 cd $BUILD_DIR
+whoami
 chmod 775 -R ../
 
 $QMAKE $PROJECT_DIR
