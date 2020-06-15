@@ -17,12 +17,15 @@ if [[ ! -d "$BUILD_DIR" ]]; then
 fi
 
 cd $BUILD_DIR
+chmod -m775 -R ../
 
 $QMAKE $PROJECT_DIR
 make
 
-echo "do we have a makefile ?"
+echo "do we have a makefile in QtBuild?"
 ls -la
 
+echo "above directory"
+ls
 echo "Ending Executing $0"
 
