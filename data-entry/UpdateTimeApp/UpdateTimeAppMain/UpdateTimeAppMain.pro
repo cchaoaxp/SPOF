@@ -33,20 +33,16 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 #unix:!macx: LIBS += -L$$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/apps/UpdateTimeApp/UpdateTimeAppLib/ -lUpdateTimeAppLib
 
+unix:!macx: LIBS += -L$$PWD/../../../build-data-entry-Desktop-Debug/UpdateTimeApp/UpdateTimeAppLib/ -lUpdateTimeAppLib
 
+INCLUDEPATH += $$PWD/../../../build-data-entry-Desktop-Debug/UpdateTimeApp/UpdateTimeAppLib
+DEPENDPATH += $$PWD/../../../build-data-entry-Desktop-Debug/UpdateTimeApp/UpdateTimeAppLib
 
-win32: LIBS += -L$$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/UpdateTimeApp/UpdateTimeAppLib/ -lUpdateTimeAppLib
+unix:!macx: PRE_TARGETDEPS += $$PWD/../../../build-data-entry-Desktop-Debug/UpdateTimeApp/UpdateTimeAppLib/libUpdateTimeAppLib.a
 
-INCLUDEPATH += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/UpdateTimeApp/UpdateTimeAppLib
-DEPENDPATH += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/UpdateTimeApp/UpdateTimeAppLib
+unix:!macx: LIBS += -L$$PWD/../../../build-data-entry-Desktop-Debug/libs/PanelsLib/ -lPanelsLib
 
-win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/UpdateTimeApp/UpdateTimeAppLib/UpdateTimeAppLib.lib
-else:win32-g++: PRE_TARGETDEPS += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/UpdateTimeApp/UpdateTimeAppLib/libUpdateTimeAppLib.a
+INCLUDEPATH += $$PWD/../../../build-data-entry-Desktop-Debug/libs/PanelsLib
+DEPENDPATH += $$PWD/../../../build-data-entry-Desktop-Debug/libs/PanelsLib
 
-win32: LIBS += -L$$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib/ -lPanelsLib
-
-INCLUDEPATH += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib
-DEPENDPATH += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib
-
-win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib/PanelsLib.lib
-else:win32-g++: PRE_TARGETDEPS += $$PWD/../../../build-data-entry-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/libs/PanelsLib/libPanelsLib.a
+unix:!macx: PRE_TARGETDEPS += $$PWD/../../../build-data-entry-Desktop-Debug/libs/PanelsLib/libPanelsLib.a
