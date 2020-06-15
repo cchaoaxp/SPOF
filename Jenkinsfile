@@ -20,7 +20,9 @@ pipeline {
 
     stage('Qt-Build') {
       steps {
-        sh './buildScript.sh'
+        sh '''echo "where is $0"
+
+./buildScript.sh'''
       }
     }
 
