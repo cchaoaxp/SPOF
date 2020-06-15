@@ -28,6 +28,7 @@ echo "ls SPOF items:"
 ls $PROJECT_DIR
 
 $QMAKE $PROJECT_DIR
+cd ..
 make
 ls
 
