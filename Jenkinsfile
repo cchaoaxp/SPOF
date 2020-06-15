@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('dev') {
+    stage('master') {
       steps {
-        git 'git@github.com:cchaoaxp/SPOF.git'
+        git(url: 'https://github.com/cchaoaxp/SPOF.git', branch: 'master')
       }
     }
 
