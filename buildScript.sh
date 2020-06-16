@@ -14,19 +14,14 @@ PROJECT_DIR=../data-entry
 
 if [[ ! -d "$BUILD_DIR" ]]; then
    mkdir -m775 $BUILD_DIR
+   cd $BUILD_DIR
+else
+   cd $BUILD_DIR
+   rm -rf *
 fi
-
-cd $BUILD_DIR
-whoami
-chmod 775 -R ../
 
 $QMAKE $PROJECT_DIR
 make
 
-echo "do we have a makefile in QtBuild?"
-ls -la
-
-echo "above directory"
-ls
 echo "Ending Executing $0"
 

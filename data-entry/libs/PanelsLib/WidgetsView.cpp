@@ -33,4 +33,4 @@ WidgetsView::WidgetsView( QWidget *parent )
 
 WidgetsView::~WidgetsView() { delete ui; }
 
-QPushButton *WidgetsView::getOk() { return ui->okButton; }
+QPushButton *WidgetsView::getOk() const{ return ui->okButton; }

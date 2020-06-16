@@ -29,6 +29,6 @@ void CutomizeCalendar::createCalendarPreview()
    //   setWindowTitle(tr("Calendar Widget"));
 }
 
-QPushButton *CutomizeCalendar::getOk() { return ui->okButton; }
+QPushButton *CutomizeCalendar::getOk() const { return ui->okButton; }
 
 void CutomizeCalendar::on_minimizeButton_clicked() { QWidget::showMinimized(); }

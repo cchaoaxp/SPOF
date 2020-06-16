@@ -10,4 +10,4 @@ TaskSummary::TaskSummary(QWidget *parent)
 
 TaskSummary::~TaskSummary() { delete ui; }
 
-QPushButton *TaskSummary::getYes() { return ui->yesButton; }
+const QPushButton *TaskSummary::getYes() const { return ui->yesButton; }

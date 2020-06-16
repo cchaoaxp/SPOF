@@ -17,7 +17,7 @@ class TaskSummary : public QWidget
    explicit TaskSummary(QWidget *parent = nullptr);
    ~TaskSummary();
 
-   QPushButton *getYes();
+   const QPushButton *getYes() const;
 
    private:
    Ui::TaskSummary *ui;

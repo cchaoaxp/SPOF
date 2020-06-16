@@ -16,6 +16,11 @@ void UpdateTimeAppLib::start()
    showNext( taskSummary );
 }
 
+const TaskSummary *UpdateTimeAppLib::getTaskSummary() const
+{
+    return taskSummary;
+}
+
 void UpdateTimeAppLib::showDataSelection()
 {
    dataSelection = new SelectionItems();
