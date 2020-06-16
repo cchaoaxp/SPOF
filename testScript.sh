@@ -2,6 +2,7 @@
 
 echo "Executing $0"
 echo "hostname is $HOSTNAME"
+echo "current path is: $PWD"
 
 if [ $HOSTNAME != "localhost.localdomain" ]; then
    echo "No match"
