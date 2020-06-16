@@ -8,13 +8,13 @@ if [ $HOSTNAME != "localhost.localdomain" ]; then
    echo "No match"
    exit 1
 fi
-TEST_DIR=QtBuild/UpdateTimeApp/UpdateTimeAppMain/
+TEST_DIR=QtBuild/tests/testUpdateTime/
 
 cd $TEST_DIR
 echo "before Executing"
 ls -la
 
-./UpdateTimeAppMain -wait -o UpdateTimeTest.xml -xml
+./testUpdateTime -wait -o UpdateTimeTest.xml -xml
 
 echo "After Executing"
 ls -la
