@@ -7,17 +7,9 @@ pipeline {
       }
     }
 
-    stage('Qt-Build') {
-      agent any
+    stage('QtBuild') {
       steps {
         sh './buildScript.sh'
-      }
-    }
-
-    stage('QtUnitTest') {
-      steps {
-        sh './testScript.sh'
-        junit(testResults: 'updateTimeTest.xml', allowEmptyResults: true)
       }
     }
 
