@@ -11,6 +11,7 @@ pipeline {
       agent any
       steps {
         sh './buildScript.sh'
+        archiveArtifacts(onlyIfSuccessful: true, artifacts: 'target/*.hpi')
       }
     }
 
