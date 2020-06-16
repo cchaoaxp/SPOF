@@ -8,6 +8,7 @@ pipeline {
     }
 
     stage('Qt-Build') {
+      agent any
       steps {
         sh './buildScript.sh'
       }
