@@ -13,5 +13,12 @@ pipeline {
       }
     }
 
+    stage('QtUnitTest') {
+      steps {
+        sh '''echo "pwd is $0"
+cd ..'''
+      }
+    }
+
   }
 }
