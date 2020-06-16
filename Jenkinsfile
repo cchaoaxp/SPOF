@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('QtBuild') {
-      steps {
-        sh './buildScript.sh'
+      parallel {
+        stage('QtBuild') {
+          steps {
+            sh './buildScript.sh'
+          }
+        }
+
+        stage('Qt Unit Test') {
+          steps {
+            sh './testScript.sh'
+          }
+        }
+
       }
     }
 
