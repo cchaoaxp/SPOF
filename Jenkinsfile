@@ -11,13 +11,13 @@ pipeline {
       agent any
       steps {
         sh './buildScript.sh'
-        archiveArtifacts(onlyIfSuccessful: true, artifacts: 'target/*.hpi')
       }
     }
 
     stage('QtUnitTest') {
       steps {
         sh './testScript.sh'
+        junit(testResults: 'updateTimeTest.xml', allowEmptyResults: true)
       }
     }
 
