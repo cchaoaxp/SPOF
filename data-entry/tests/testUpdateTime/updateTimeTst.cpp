@@ -46,7 +46,7 @@ void updateTimeTst::testGreenGo()
     QVERIFY2(test.getTaskSummary()->isVisible(), "Expected task summary is displayed");
 
     if(waitFlag ){
-        QTest::qWait(1000);
+        QTest::qWait(5000);
     }
 }
 

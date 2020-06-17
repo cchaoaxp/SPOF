@@ -1,7 +1,10 @@
 #!/bin/bash
 
-Xvfb :99 >& /dev/null &
-export DISPLAY=:99
+#Xvfb :99 >& /dev/null &
+#export DISPLAY=:99
+export DISPLAY=':99.0'
+Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+
 echo "Executing $0"
 echo "hostname is $HOSTNAME"
 echo "current path is: $PWD"
