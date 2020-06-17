@@ -14,12 +14,13 @@ PROJECT_DIR=../data-entry
 
 if [[ ! -d "$BUILD_DIR" ]]; then
    mkdir -m775 $BUILD_DIR
-   cd $BUILD_DIR
-else
-   cd $BUILD_DIR
-   rm -rf *
+#   cd $BUILD_DIR
+#else
+#   cd $BUILD_DIR
+#   rm -rf *
 fi
 
+cd $BUILD_DIR
 $QMAKE $PROJECT_DIR
 make
 
