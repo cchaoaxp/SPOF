@@ -15,18 +15,18 @@ pipeline {
         success {
             archiveArtifacts 'QtBuild/Makefile'
         }
+      }
     }
 
     stage('Qt Unit Test') {
       steps {
         sh './testScript.sh'
       }
-
       post {
         always {
             junit 'QtBuild/tests/testUpdateTime/*.xml'
         }
+      }
     }
-
   }
 }
