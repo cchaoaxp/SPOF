@@ -12,6 +12,7 @@ TEST_DIR=QtBuild/tests/testUpdateTime/
 
 cd $TEST_DIR
 echo "before Executing"
+chmod +x testUpdateTime
 ls -la
 
 ./testUpdateTime -wait -o UpdateTimeTest.xml -xml
