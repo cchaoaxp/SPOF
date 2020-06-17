@@ -28,7 +28,7 @@ pipeline {
 
       }
       steps {
-        wrap(delegate: [$class: 'Xvfb', screen: '1920x1080x24']) {
+        wrap(delegate: [$class: 'Xvfb']) {
           sh './testScript.sh'
         }
 
