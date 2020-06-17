@@ -18,6 +18,8 @@ pipeline {
         sh './buildScript.sh'
       }
     }
+    
+    //change
 
     stage('QtUnitTest') {
       steps {
