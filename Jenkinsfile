@@ -22,6 +22,7 @@ pipeline {
     stage('QtUnitTest') {
       steps {
         sh './testScript.sh'
+        junit 'UpdateTimeTest.xml'
       }
     }
 
