@@ -22,14 +22,17 @@ pipeline {
     stage('Qt Unit Test') {
       post {
         always {
-          junit 'QtBuild/tests/testUpdateTime/*.xml'
+          junit '*.xml'
         }
 
       }
       steps {
-        sh './testScript.sh'
+        script {
+          wrap([$class: 'Xvfb', screen: '1920x1080x24']) {
+            sh './testScript.sh'
+          }
+        }
       }
     }
-
   }
 }
