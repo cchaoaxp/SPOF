@@ -28,12 +28,12 @@ pipeline {
 
       }
       steps {
-        script {
-          wrap([$class: 'Xvfb', screen: '1920x1080x24']) {
-            sh './testScript.sh'
-          }
+        wrap(delegate: [$class: 'Xvfb', screen: '1920x1080x24']) {
+          sh './testScript.sh'
         }
+
       }
     }
+
   }
 }
