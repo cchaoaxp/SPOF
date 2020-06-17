@@ -29,6 +29,7 @@ pipeline {
       steps {
         sh '''echo "JENKINS_HOME is: $JENKINS_HOME"
 echo "PATH is: $PATH"
+export PATH="$PATH:/usr/bin/Xvfb"
 tool name: \'Xvfb\', type: \'org.jenkinsci.plugins.xvfb.XvfbInstallation\'
 ./testScript.sh'''
       }
