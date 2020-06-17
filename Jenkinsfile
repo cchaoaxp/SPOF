@@ -29,10 +29,8 @@ pipeline {
       steps {
         sh '''echo "JENKINS_HOME is: $JENKINS_HOME"
 echo "PATH is: $PATH"
-
-wrap([$class: \'Xvfb\']){
-./testScript.sh
-}'''
+tool name: \'Xvfb\', type: \'org.jenkinsci.plugins.xvfb.XvfbInstallation\'
+./testScript.sh'''
       }
     }
 
