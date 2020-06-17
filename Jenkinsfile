@@ -19,7 +19,8 @@ pipeline {
       }
     }
     
-    //change yyy
+    //change dsDDDDDDDD
+    //OrIG
 
     stage('QtUnitTest') {
       steps {
