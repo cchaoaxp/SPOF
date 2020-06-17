@@ -22,6 +22,7 @@ pipeline {
     stage('Qt Unit Test') {
       post {
         always {
+          echo "where am I: $PWD"
           junit 'UpdateTimeTest.xml'
           archiveArtifacts 'UpdateTimeTest.xml'
         }
