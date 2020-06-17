@@ -8,25 +8,31 @@ pipeline {
     }
 
     stage('QtBuild') {
-      steps {
-        sh './buildScript.sh'
-      }
       post {
         success {
-            archiveArtifacts 'QtBuild/Makefile'
+          archiveArtifacts 'QtBuild/Makefile'
         }
+
+      }
+      steps {
+        sh './buildScript.sh'
       }
     }
 
     stage('Qt Unit Test') {
-      steps {
-        sh './testScript.sh'
-      }
       post {
         always {
-            junit 'QtBuild/tests/testUpdateTime/*.xml'
+          junit 'QtBuild/tests/testUpdateTime/*.xml'
         }
+
+      }
+      steps {
+        sh '''echo "JENKINS_HOME is: $JENKINS_HOME"
+echo "PATH is: $PATH"
+
+./testScript.sh'''
       }
     }
+
   }
 }
