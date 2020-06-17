@@ -27,10 +27,7 @@ pipeline {
 
       }
       steps {
-        sh '''echo "JENKINS_HOME is: $JENKINS_HOME"
-        echo "PATH is: $PATH"
-        export PATH="$PATH:/usr/bin/Xvfb"
-        ./testScript.sh'''
+        sh './testScript.sh'
       }
     }
 
