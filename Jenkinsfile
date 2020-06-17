@@ -16,6 +16,7 @@ pipeline {
     stage('Qt Unit Test') {
       steps {
         sh './testScript.sh'
+        junit 'target/**/tests/testUpdateTime/*.xml'
       }
     }
 
