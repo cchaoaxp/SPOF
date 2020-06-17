@@ -19,7 +19,7 @@ pipeline {
       }
     }
     
-    //change
+    //change xxxxxx
 
     stage('QtUnitTest') {
       steps {
