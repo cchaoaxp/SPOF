@@ -11,13 +11,21 @@ pipeline {
       steps {
         sh './buildScript.sh'
       }
+      post {
+        success {
+            archiveArtifacts 'QtBuild/Makefile'
+        }
     }
 
     stage('Qt Unit Test') {
       steps {
         sh './testScript.sh'
-        junit 'target/**/tests/testUpdateTime/*.xml'
       }
+
+      post {
+        always {
+            junit 'QtBuild/tests/testUpdateTime/*.xml'
+        }
     }
 
   }
