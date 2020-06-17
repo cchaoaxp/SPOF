@@ -1,7 +1,7 @@
 #!/bin/bash
 
-Xvfb :0 >& /dev/null &
-export DISPLAY=:0
+Xvfb :99 >& /dev/null &
+export DISPLAY=:99
 echo "Executing $0"
 echo "hostname is $HOSTNAME"
 echo "current path is: $PWD"
