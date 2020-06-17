@@ -22,7 +22,8 @@ pipeline {
     stage('Qt Unit Test') {
       post {
         always {
-          junit '*.xml'
+          junit 'UpdateTimeTest.xml'
+          archiveArtifacts 'UpdateTimeTest.xml'
         }
 
       }
