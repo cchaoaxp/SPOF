@@ -30,8 +30,9 @@ pipeline {
         sh '''echo "JENKINS_HOME is: $JENKINS_HOME"
 echo "PATH is: $PATH"
 
-wrap([$class: \'Xvfb\'])
-./testScript.sh'''
+wrap([$class: \'Xvfb\']){
+./testScript.sh
+}'''
       }
     }
 
