@@ -16,7 +16,7 @@ class WidgetsView : public QWidget
    public:
    explicit WidgetsView( QWidget *parent = nullptr );
    ~WidgetsView();
-   QPushButton *getOk();
+   QPushButton *getOk() const;
 
    private:
    Ui::WidgetsView *ui;

@@ -17,7 +17,7 @@ class SelectionItems : public QWidget
    explicit SelectionItems(QWidget *parent = nullptr);
    ~SelectionItems();
 
-   QPushButton *getOk();
+   QPushButton *getOk() const;
 
    private:
    Ui::SelectionItems *ui;

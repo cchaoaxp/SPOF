@@ -11,14 +11,9 @@ class UpdateTimeAppLib : public QObject
 {
    Q_OBJECT
    public:
-   TaskSummary *taskSummary;
-   SelectionItems *dataSelection;
-   CutomizeCalendar *calendar;
-   WidgetsView *widgetsView;
-
-   public:
    UpdateTimeAppLib();
    void start();
+   const TaskSummary* getTaskSummary() const;
    void showNext( QWidget *w );
 
    public slots:
@@ -29,6 +24,11 @@ class UpdateTimeAppLib : public QObject
 
    private:
    QWidget *current;
+   TaskSummary *taskSummary;
+   SelectionItems *dataSelection;
+   CutomizeCalendar *calendar;
+   WidgetsView *widgetsView;
+   friend class updateTimeTst;
 };
 
 #endif// UPDATETIMEAPPLIB_H

@@ -10,4 +10,4 @@ SelectionItems::SelectionItems(QWidget *parent)
 
 SelectionItems::~SelectionItems() { delete ui; }
 
-QPushButton *SelectionItems::getOk() { return ui->okButton; }
+QPushButton *SelectionItems::getOk() const { return ui->okButton; }

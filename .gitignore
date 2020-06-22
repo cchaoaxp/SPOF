@@ -2,7 +2,7 @@
 *.slo
 *.lo
 *.o
-*.a
+#*.a
 *.la
 *.lai
 *.so
@@ -28,7 +28,7 @@ ui_*.h
 *.qmlc
 *.jsc
 Makefile*
-*build-*
+#*build-*
 *.qm
 *.prl
 

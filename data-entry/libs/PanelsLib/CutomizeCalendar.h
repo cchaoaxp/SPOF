@@ -32,7 +32,7 @@ class CutomizeCalendar : public QWidget
 
    void createCalendarPreview();
 
-   QPushButton *getOk();
+   QPushButton *getOk() const;
 
    private slots:
    void on_minimizeButton_clicked();
