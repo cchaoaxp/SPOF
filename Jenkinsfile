@@ -6,14 +6,8 @@ pipeline {
         git(url: 'https://github.com/cchaoaxp/SPOF.git', branch: 'master')
       }
     }
-
-    stage('QtBuild') {
-      post {
-        success {
-          archiveArtifacts 'QtBuild/Makefile'
-        }
-
-      }
+    stage('Qt-Build') {
+      agent any
       steps {
         sh './buildScript.sh'
       }
