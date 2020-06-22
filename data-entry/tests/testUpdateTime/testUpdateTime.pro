@@ -25,3 +25,6 @@ INCLUDEPATH += $$PWD/../../../build-data-entry-Desktop-Debug/libs/PanelsLib
 DEPENDPATH += $$PWD/../../../build-data-entry-Desktop-Debug/libs/PanelsLib
 
 unix:!macx: PRE_TARGETDEPS += $$PWD/../../../build-data-entry-Desktop-Debug/libs/PanelsLib/libPanelsLib.a
+
+HEADERS += \
+    updateTimeTst.h

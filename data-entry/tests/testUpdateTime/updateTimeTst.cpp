@@ -1,26 +1,10 @@
 #include <QtTest>
 #include <QApplication>
-#include <UpdateTimeAppLib.h>
 #include <TaskSummary.h>
+#include <UpdateTimeAppLib.h>
+#include "updateTimeTst.h"
 
 // add necessary includes here
-
-class updateTimeTst : public QObject
-{
-    Q_OBJECT
-
-public:
-    updateTimeTst();
-    ~updateTimeTst();
-    void wait(bool flag);
-
-private slots:
-    void testGreenGo();
-
-private:
-    bool waitFlag;
-
-};
 
 updateTimeTst::updateTimeTst()
 {
@@ -40,13 +24,13 @@ void updateTimeTst::wait(bool flag)
 void updateTimeTst::testGreenGo()
 {
     UpdateTimeAppLib test;
-    QVERIFY2(test.getTaskSummary() == nullptr, "Expect tasksummary is not initializing.");
+    QVERIFY2(test.taskSummary == nullptr, "Expect tasksummary is not initializing.");
     test.start();
-    QVERIFY2(test.getTaskSummary() != nullptr, "Expect tasksummary is initialized.");
-    QVERIFY2(test.getTaskSummary()->isVisible(), "Expected task summary is displayed");
+    QVERIFY2(test.taskSummary != nullptr, "Expect tasksummary is initialized.");
+    QVERIFY2(test.taskSummary->isVisible(), "Expected task summary is displayed");
 
     if(waitFlag ){
-        QTest::qWait(5000);
+        QTest::qWait(2000);
     }
 }
 
@@ -73,4 +57,4 @@ int main( int argc, char *argv[] )
 
 /*QTEST_MAIN(updateTimeTst)*/
 
-#include "updateTimeTst.moc"
+//#include "updateTimeTst.moc"

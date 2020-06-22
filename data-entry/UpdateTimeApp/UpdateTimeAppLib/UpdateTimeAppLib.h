@@ -28,6 +28,7 @@ class UpdateTimeAppLib : public QObject
    SelectionItems *dataSelection;
    CutomizeCalendar *calendar;
    WidgetsView *widgetsView;
+   friend class updateTimeTst;
 };
 
 #endif// UPDATETIMEAPPLIB_H
